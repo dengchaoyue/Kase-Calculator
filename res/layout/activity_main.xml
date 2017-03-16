@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.elaine.workcode.MainActivity"
+    android:background="@color/colorBackGround">
+
+    <LinearLayout
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:id="@+id/app_title"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo_in_app"
+            android:paddingLeft="80dp"/>
+        <TextView
+            android:id="@+id/language_choose"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
+            android:text="@string/language"
+            android:textSize="15dp"
+            android:layout_gravity="bottom"/>
+
+        </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/app_title"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorText"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/FD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_title"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="20dp"
+        android:text="Filter Density : "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorText"/>
+
+    <com.example.elaine.workcode.MyHorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:scrollbars="none"
+        android:id="@+id/FDScrollView"
+        android:layout_below="@id/FD"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorBackGround">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutAbove"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/colorBackGround">
+        </LinearLayout>
+
+    </com.example.elaine.workcode.MyHorizontalScrollView>
+
+    <TextView
+        android:id="@+id/BSS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/FDScrollView"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="20dp"
+        android:text="Base Shutter Speed : "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorText"/>
+
+    <com.example.elaine.workcode.MyHorizontalScrollViewBelow
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:scrollbars="none"
+        android:id="@+id/BSSScrollView"
+        android:background="@color/colorBackGround"
+        android:layout_below="@+id/BSS"
+        android:layout_alignLeft="@+id/BSS"
+        android:layout_alignStart="@+id/BSS">
+        <LinearLayout
+            android:id="@+id/linearLayoutBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:background="@color/colorBackGround">
+        </LinearLayout>
+    </com.example.elaine.workcode.MyHorizontalScrollViewBelow>
+
+    <TextView
+        android:id="@+id/tabs_line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/BSSScrollView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Shutter Speed with"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorText"/>
+
+    <TextView
+        android:id="@+id/tabs_line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tabs_line1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="n-stops (ND n.n) filter:"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorText"/>
+
+    <TextView
+        android:id="@+id/final_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tabs_line2"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:text="Please Choose Parameters"
+        android:textSize="25dp"
+        android:textColor="@color/colorText"/>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="0dp"
+        android:src="@drawable/footer"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/final_result" />
+
+</RelativeLayout>
